@@ -6,7 +6,8 @@
 		"./CHANGELOG.md",
 		"./.vscode",
 		"./.github",
-		".gitignore"
+		"./.gitignore",
+		"./renovate.json"
 	],
 	"words": ["knip", "commitlint", "inflint", "Rofe", "czvinyl", "exlint"]
 }
