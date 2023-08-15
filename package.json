@@ -1,0 +1,102 @@
+{
+	"name": "sudo-cli",
+	"description": "Run any script with privileged permissions, prompting the user with a graphical OS dialog if necessary",
+	"author": {
+		"email": "talrofe111@gmail.com",
+		"name": "Tal Rofe"
+	},
+	"keywords": [
+		"sudo",
+		"os",
+		"dialog",
+		"prompt",
+		"exec",
+		"user access control",
+		"privileges",
+		"administrative",
+		"elevate",
+		"run as administrator"
+	],
+	"contributors": [
+		{
+			"name": "Tal Rofe",
+			"email": "talrofe111@gmail.com"
+		}
+	],
+	"license": "MIT",
+	"homepage": "https://github.com/tal-rofe/sudo-cli",
+	"bugs": {
+		"url": "https://github.com/tal-rofe/sudo-cli/issues",
+		"email": "talrofe111@gmail.com"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/tal-rofe/sudo-cli.git"
+	},
+	"type": "module",
+	"files": [
+		"./bin/sudo-cli.js",
+		"./dist/index.cjs"
+	],
+	"bin": "./bin/sudo-cli.js",
+	"publishConfig": {
+		"access": "public"
+	},
+	"scripts": {
+		"husky:install": "husky install",
+		"git:config": "git config --local include.path ../.gitconfig",
+		"set-dev": "run-p husky:install git:config",
+		"onboarding": "node ./scripts/onboarding.js",
+		"prepare": "is-ci || run-s set-dev onboarding",
+		"build": "node --loader ts-node/esm node_modules/webpack-cli/bin/cli.js -c ./webpack.config.ts",
+		"automation": "node ./automation/main.spec.cjs",
+		"lint": "eslint -c ./.eslintrc.cjs \"**/*.{ts,js,cjs}\"",
+		"prettier": "prettier --check **/*.{ts,js,cjs,json,yaml}",
+		"type-check": "tsc --project ./tsconfig.json",
+		"inflint": "inflint -c ./inflint.config.cjs",
+		"knip": "knip -c ./knip.json -t ./tsconfig.json",
+		"cspell": "cspell lint -c ./cspell.json --gitignore --no-progress --no-summary **"
+	},
+	"devDependencies": {
+		"@commitlint/cli": "^17.7.1",
+		"@exlint.io/inflint": "2.0.0",
+		"@types/node": "20.5.0",
+		"@types/webpack-node-externals": "3.0.0",
+		"@types/yargs": "17.0.24",
+		"@typescript-eslint/eslint-plugin": "6.4.0",
+		"@typescript-eslint/parser": "6.4.0",
+		"chalk": "^5.3.0",
+		"commitizen": "^4.3.0",
+		"commitlint": "17.7.1",
+		"cspell": "7.0.0",
+		"cz-vinyl": "2.3.0",
+		"eslint": "8.47.0",
+		"eslint-config-prettier": "9.0.0",
+		"eslint-plugin-deprecation": "1.5.0",
+		"eslint-plugin-import": "2.28.0",
+		"eslint-plugin-node": "11.1.0",
+		"eslint-plugin-unicorn": "48.0.1",
+		"eslint-plugin-unused-imports": "3.0.0",
+		"figlet": "^1.6.0",
+		"husky": "^8.0.3",
+		"is-ci": "^3.0.1",
+		"knip": "^2.19.3",
+		"lint-staged": "14.0.0",
+		"npm-run-all": "^4.1.5",
+		"prettier": "3.0.1",
+		"rimraf": "5.0.1",
+		"ts-loader": "9.4.4",
+		"ts-node": "10.9.1",
+		"tsconfig-paths-webpack-plugin": "4.1.0",
+		"typescript": "5.1.6",
+		"webpack": "5.88.2",
+		"webpack-cli": "5.1.4",
+		"webpack-node-externals": "3.0.0",
+		"webpack-shell-plugin-next": "2.3.1"
+	},
+	"dependencies": {
+		"sudo-prompt": "9.2.1",
+		"v8-compile-cache": "^2.4.0",
+		"yargs": "17.7.2"
+	}
+}

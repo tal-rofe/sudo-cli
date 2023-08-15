@@ -1,0 +1,12 @@
+{
+	"language": "en",
+	"ignorePaths": [
+		"./pnpm-lock.yaml",
+		"./renovate.json",
+		"./CHANGELOG.md",
+		"./.vscode",
+		"./.github",
+		".gitignore"
+	],
+	"words": ["knip", "commitlint", "inflint", "Rofe", "czvinyl", "exlint"]
+}
