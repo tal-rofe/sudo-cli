@@ -25,14 +25,15 @@
 
 **Globally**
 
-````bash
+```bash
 npm install --global sudo-cli
+```
 
 **Locally**
 
 ```bash
 npm install --save-dev sudo-cli
-````
+```
 
 ## Usage
 
