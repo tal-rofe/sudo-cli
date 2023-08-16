@@ -1,7 +1,10 @@
 {
 	"compilerOptions": {
 		"paths": {
-			"@/helpers/*": ["src/helpers/*"]
+			"@/helpers/*": ["src/helpers/*"],
+			"@/constants/*": ["src/constants/*"],
+			"@/utils/*": ["src/utils/*"],
+			"@/functions/*": ["src/functions/*"]
 		}
 	}
 }

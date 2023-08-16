@@ -60,7 +60,9 @@
 	"devDependencies": {
 		"@commitlint/cli": "^17.7.1",
 		"@exlint.io/inflint": "2.0.0",
+		"@types/fs-extra": "11.0.1",
 		"@types/node": "20.5.0",
+		"@types/string-template": "1.0.2",
 		"@types/webpack-node-externals": "3.0.0",
 		"@types/yargs": "17.0.24",
 		"@typescript-eslint/eslint-plugin": "6.4.0",
@@ -95,7 +97,8 @@
 		"webpack-shell-plugin-next": "2.3.1"
 	},
 	"dependencies": {
-		"sudo-prompt": "9.2.1",
+		"fs-extra": "11.1.1",
+		"string-template": "1.0.0",
 		"v8-compile-cache": "^2.4.0",
 		"yargs": "17.7.2"
 	}
