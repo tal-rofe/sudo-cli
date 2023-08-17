@@ -8,8 +8,8 @@ permissions:
     contents: read
 
 jobs:
-    depcheck:
-        name: Depcheck
+    knip:
+        name: Knip
 
         runs-on: ubuntu-latest
         steps:
@@ -20,8 +20,8 @@ jobs:
                   package-manager: pnpm
                   package-manager-version: 8.6.12
 
-            - name: Test Depcheck
-              run: pnpm depcheck
+            - name: Test Knip
+              run: pnpm knip
 
     inflint:
         name: Inflint
