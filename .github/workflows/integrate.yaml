@@ -100,22 +100,3 @@ jobs:
 
             - name: Test build
               run: pnpm build
-
-    automation:
-        name: Automation
-        runs-on: ubuntu-latest
-        needs: build
-
-        steps:
-            - name: Setup Node environment
-              uses: Exlint/node-environment@v1.2.6
-              with:
-                  node-version: 18.16.0
-                  package-manager: pnpm
-                  package-manager-version: 8.6.12
-
-            - name: Build
-              run: pnpm build
-
-            - name: Automation
-              run: pnpm automation
