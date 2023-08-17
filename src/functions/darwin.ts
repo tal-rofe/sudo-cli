@@ -1,3 +1,5 @@
+import path from 'node:path';
+
 import fs from 'fs-extra';
 import format from 'string-template';
 
@@ -16,5 +18,5 @@ export const executePrivilegedDarwin = async (name: string, command: string) => 
 		`/usr/bin/env SUDO_ASKPASS="${ASK_PASSWORD_SCRIPT_FILE_PATH}" /usr/bin/sudo -A ${command}`,
 	);
 
-	fs.remove(ASK_PASSWORD_SCRIPT_FILE_PATH);
+	fs.remove(path.dirname(ASK_PASSWORD_SCRIPT_FILE_PATH));
 };

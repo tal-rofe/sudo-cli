@@ -8,7 +8,7 @@ export const executeSudo = async (name: string, command: string) => {
 	}
 
 	if (process.platform === 'win32') {
-		await executePrivilegedWindows(name, command);
+		await executePrivilegedWindows(command);
 	}
 
 	if (process.platform === 'linux') {
