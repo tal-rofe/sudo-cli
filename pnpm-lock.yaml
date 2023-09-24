@@ -32,8 +32,8 @@ devDependencies:
     specifier: 1.0.2
     version: 1.0.2
   '@types/webpack-node-externals':
-    specifier: 3.0.0
-    version: 3.0.0(webpack-cli@5.1.4)
+    specifier: 3.0.1
+    version: 3.0.1(webpack-cli@5.1.4)
   '@types/yargs':
     specifier: 17.0.24
     version: 17.0.24
@@ -910,8 +910,8 @@ packages:
     resolution: {integrity: sha512-7VFuFekVzbr0uktqfBmsJc/CqjwnXWWOc5mHn7rajxzhLO9aM9nMMhtpa+90UK1GW6C0ctQF/9Fh0qJBwjqNXg==}
     dev: true
 
-  /@types/webpack-node-externals@3.0.0(webpack-cli@5.1.4):
-    resolution: {integrity: sha512-Z3ELJiH0aZjxkoymT2nrGSmCF/CYjiqC0bpv4/DWy9h7e6gP4B2qmKZFHJFermeF0SYURbSw0puddQl9dMMV0w==}
+  /@types/webpack-node-externals@3.0.1(webpack-cli@5.1.4):
+    resolution: {integrity: sha512-qUW0dOwn+ohnflSrDnscXx25VMli+IRFd9D6B0u7VzWU/DNg6zwqjh6gC6vNWyB7VoPHOYmEAa9pAmoSnYFrXg==}
     dependencies:
       '@types/node': 20.5.0
       webpack: 5.88.2(webpack-cli@5.1.4)
