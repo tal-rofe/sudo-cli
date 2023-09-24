@@ -86,6 +86,21 @@ jobs:
             - name: Test ESLint
               run: pnpm lint
 
+    cspell:
+        name: CSpell
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Setup Node environment
+              uses: Exlint/node-environment@v1.2.6
+              with:
+                  node-version: 18.15.0
+                  package-manager: pnpm
+                  package-manager-version: 8.6.12
+
+            - name: CSpell
+              run: pnpm cspell
+
     build:
         name: Build
 
