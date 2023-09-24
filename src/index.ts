@@ -1,5 +1,6 @@
 import Yargs from 'yargs/yargs';
-import { sudoPrompter } from './helpers/sudo-prompt';
+
+import { executeSudo } from '@/helpers/execute-sudo';
 
 const argv = await Yargs(process.argv.slice(2)).options({
 	name: { type: 'string', default: 'sudo cli', alias: 'n' },
@@ -13,4 +14,4 @@ if (!command) {
 	process.exit(1);
 }
 
-sudoPrompter(argv.name, command.toString());
+executeSudo(argv.name, command.toString());

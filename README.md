@@ -21,6 +21,8 @@
 
 <p align="center"><img src="assets/example.png" width="200"/></p>
 
+**This package is under development (and slow one.. 😐) so feel free to help it by making a PR**
+
 ## Installation
 
 **Globally**
@@ -37,8 +39,10 @@ npm install --save-dev sudo-cli
 
 ## Usage
 
+You need to provide the name of your application for your application (optional) and the command to be executed with privileged permissions.
+
 ```sh
-$ sudo-cli -n "my app" "echo Portugal"
+$ sudo-cli --name "[your app name]" "<command to run>"
 ```
 
 ## ESM support
