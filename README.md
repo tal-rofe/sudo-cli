@@ -21,6 +21,8 @@
 
 <p align="center"><img src="assets/example.png" width="200"/></p>
 
+**This package is under development (and slow one.. 😐) so feel free to help it by making a PR**
+
 ## Installation
 
 **Globally**
