@@ -13,9 +13,11 @@ export const executePrivilegedWindows = async (command: string) => {
 		{ encoding: 'utf8' },
 	);
 
-	await spawnCommand(
+	const spawnExitCode = await spawnCommand(
 		`powershell.exe Start-Process -FilePath "${EXECUTE_COMMAND_SCRIPT_FILE_PATH}" -WorkingDirectory "${process.cwd()}" -WindowStyle hidden -Verb runAs`,
 	);
+
+	process.exitCode = spawnExitCode;
 
 	fs.remove(path.dirname(EXECUTE_COMMAND_SCRIPT_FILE_PATH));
 };

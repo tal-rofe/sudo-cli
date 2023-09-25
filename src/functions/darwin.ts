@@ -14,9 +14,11 @@ export const executePrivilegedDarwin = async (name: string, command: string) => 
 		mode: 0o777,
 	});
 
-	await spawnCommand(
+	const spawnExitCode = await spawnCommand(
 		`/usr/bin/env SUDO_ASKPASS="${ASK_PASSWORD_SCRIPT_FILE_PATH}" /usr/bin/sudo -A ${command}`,
 	);
+
+	process.exitCode = spawnExitCode;
 
 	fs.remove(path.dirname(ASK_PASSWORD_SCRIPT_FILE_PATH));
 };
