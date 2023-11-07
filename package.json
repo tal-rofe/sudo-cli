@@ -60,7 +60,7 @@
 	"devDependencies": {
 		"@exlint.io/inflint": "2.0.0",
 		"@types/fs-extra": "11.0.2",
-		"@types/node": "20.8.9",
+		"@types/node": "20.9.0",
 		"@types/string-template": "1.0.2",
 		"@types/webpack-node-externals": "3.0.1",
 		"@types/yargs": "17.0.26",
