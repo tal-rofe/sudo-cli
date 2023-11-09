@@ -58,7 +58,7 @@
 		"cspell": "cspell lint -c ./cspell.json --gitignore --no-progress --no-summary **"
 	},
 	"devDependencies": {
-		"@exlint.io/inflint": "2.0.0",
+		"@exlint.io/inflint": "2.1.0",
 		"@types/fs-extra": "11.0.2",
 		"@types/node": "20.9.0",
 		"@types/string-template": "1.0.2",
