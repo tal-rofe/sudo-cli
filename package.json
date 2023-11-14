@@ -70,7 +70,7 @@
 		"commitizen": "^4.3.0",
 		"commitlint": "17.8.1",
 		"cspell": "7.3.9",
-		"cz-vinyl": "2.3.0",
+		"cz-vinyl": "2.4.1",
 		"eslint": "8.47.0",
 		"eslint-config-prettier": "9.0.0",
 		"eslint-plugin-deprecation": "2.0.0",
